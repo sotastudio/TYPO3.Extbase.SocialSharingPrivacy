@@ -1,0 +1,13 @@
+plugin.tx_socialsharingprivacy {
+	view {
+		templateRootPath = EXT:social_sharing_privacy/Resources/Private/Templates/
+		partialRootPath = EXT:social_sharing_privacy/Resources/Private/Partials/
+		layoutRootPath = EXT:social_sharing_privacy/Resources/Private/Layouts/
+	}
+	settings {
+ 		lib {
+ 			jQuery = EXT:social_sharing_privacy/Resources/Public/Js/jquery-1.9.1.min.js
+ 			moveToFooter = 1
+ 		}
+	}
+}

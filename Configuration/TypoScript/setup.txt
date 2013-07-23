@@ -1,0 +1,52 @@
+plugin.tx_socialsharingprivacy {
+	view {
+		templateRootPath = {$plugin.tx_socialsharingprivacy.view.templateRootPath}
+		partialRootPath = {$plugin.tx_socialsharingprivacy.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_socialsharingprivacy.view.layoutRootPath}
+	}
+	settings {
+		lib {
+			jQuery = {$plugin.tx_socialsharingprivacy.settings.jQuery}
+			jQueryCookies = {$plugin.tx_socialsharingprivacy.settings.jQueryCookies}
+			moveToFooter = {$plugin.tx_socialsharingprivacy.settings.moveToFooter}
+		}
+		# Leave empty to share dynamic urls
+		uri =
+		# line|box
+		layout = line
+		# 1|0
+		useCookies = 1
+	}
+}
+
+
+/*
+ * Localization via TS
+ */
+plugin.tx_socialsharingprivacy._LOCAL_LANG.default {
+}
+
+
+/*
+ * Styles injection via TS
+ */
+plugin.tx_socialsharingprivacy._CSS_DEFAULT_STYLE (
+
+)
+
+
+temp.socialSharingPrivacy = USER
+temp.socialSharingPrivacy {
+	userFunc = tx_extbase_core_bootstrap->run
+	pluginName = Pi1
+	extensionName = SocialSharingPrivacy
+	controller = SocialSharingPrivacy
+	action = index
+	switchableControllerActions {
+		SocialSharingPrivacy {
+			1 = index
+		}
+	}
+	settings =< plugin.tx_socialsharingprivacy.settings
+	view =< plugin.tx_socialsharingprivacy.view
+}

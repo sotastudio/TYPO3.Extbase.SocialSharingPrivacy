@@ -1,0 +1,28 @@
+{namespace ssp=Tx_SocialSharingPrivacy_ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.facebook.css')}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.twitter.css')}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.gplus.css')}" />
+
+    <ssp:AddJQuery altJQueryFile="{settings.lib.jQuery}" moveToFooter="{settings.lib.moveToFooter}" />
+    <f:if condition="{settings.useCookies}">
+        <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.cookies.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    </f:if>
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.facebook.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.twitter.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.gplus.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.facebook.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.twitter.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.gplus.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <ssp:AddJsInline code="<f:render partial='JavaScriptRaw' arguments='{_all}'/>"
+                     name="socialSharePrivacy"
+                     moveToFooter="{settings.lib.moveToFooter}"/>
+
+    <div class="social-share-privacy"></div>
+</f:section>

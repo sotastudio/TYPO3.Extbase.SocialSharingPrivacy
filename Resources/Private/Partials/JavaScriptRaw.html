@@ -1,0 +1,28 @@
+<![CDATA[
+$.fn.socialSharePrivacy.settings.order = ['facebook', 'twitter', 'gplus'];
+$.fn.socialSharePrivacy.settings.path_prefix = 'typo3conf/ext/social_sharing_privacy/Resources/Public/';
+$.fn.socialSharePrivacy.settings.css_path = '';
+
+
+$(document).ready(function () {
+    $('.social-share-privacy').socialSharePrivacy({
+        uri: ]]>{f:if(condition: settings.uri, then: "'{settings.uri}'", else: 'location.href')}<![CDATA[,
+        layout: ']]>{f:if(condition: '{0: settings.layout} == {0: "box"}', then: 'box', else: 'line')}<![CDATA[',
+        image: ']]>{f:uri.resource(path: 'Images/')}<![CDATA[',
+        services: {
+            facebook: {
+                dummy_line_img: 'Images/dummy_facebook.png',
+                dummy_box_img:  'Images/dummy_box_facebook.png'
+            },
+            twitter: {
+                dummy_line_img: 'Images/dummy_twitter.png',
+                dummy_box_img:  'Images/dummy_box_twitter.png'
+            },
+            gplus: {
+                dummy_line_img: 'Images/dummy_gplus.png',
+                dummy_box_img:  'Images/dummy_box_gplus.png'
+            }
+        }
+    });
+});
+]]>
