@@ -31,7 +31,7 @@
  * @package social_sharing_privacy
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_SocialSharingPrivacy_Controller_SocialSharingPrivacyController extends TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class Tx_SocialSharingPrivacy_Controller_SocialSharingPrivacyController extends Tx_Extbase_MVC_Controller_ActionController
 {
 	/**
 	 * action list

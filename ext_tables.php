@@ -4,17 +4,17 @@ if (!defined('TYPO3_MODE')) {
 }
 
 // Build extension name vars - used for plugin registration, flexforms and similar
-$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+$extensionName = t3lib_div::underscoredToUpperCamelCase($_EXTKEY);
 $pluginSignature = strtolower($extensionName) . '_pi1';
 
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+Tx_Extbase_Utility_Extension::registerPlugin(
 	$_EXTKEY,
 	'Pi1',
 	'SocialSharingPrivacy'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+t3lib_extMgm::addStaticFile(
 	$_EXTKEY,
 	'Configuration/TypoScript',
 	'SocialSharingPrivacy'

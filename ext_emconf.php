@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.1.0',
-	'dependencies' => '',
+	'dependencies' => 'extbase,fluid',
 	'conflicts' => '',
 	'priority' => '',
 	'loadOrder' => '',
@@ -32,19 +32,16 @@ $EM_CONF[$_EXTKEY] = array (
 	'author_company' => 'sota studio',
 	'CGLcompliance' => NULL,
 	'CGLcompliance_note' => NULL,
-	'constraints' => 
-	array (
-		'depends' => 
-		array (
-			'typo3' => '6.0-0.0.0',
-			'extbase' => '',
-			'fluid' => '',
+	'constraints' => array (
+		'depends' => array (
+			'typo3' => '4.5-0.0.0',
+			'extbase' => '1.3',
+			'fluid' => '1.3',
 			'helperkit' => '',
 			'vhs' => ''
 		),
 		'conflicts' => '',
-		'suggests' => 
-		array (
+		'suggests' => array (
 		),
 	),
 );
