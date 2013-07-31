@@ -10,12 +10,15 @@ plugin.tx_socialsharingprivacy {
 			jQueryCookies = {$plugin.tx_socialsharingprivacy.settings.jQueryCookies}
 			moveToFooter = {$plugin.tx_socialsharingprivacy.settings.moveToFooter}
 		}
-		# Leave empty to share dynamic urls
+		# Leave empty to share dynamic urls of the pages the visitor is visiting.
 		uri =
-		# line|box
+		# Choice of design: line|box
 		layout = line
-		# 1|0
+		# To obtain perma settings: 1|0
 		useCookies = 1
+		# Csv of used serviced - dont use whitespace between them.
+		# Possible values: buffer,delicious,disqus,facebook,flattr,gplus,hackernews,linkedin,mail,pinterest,reddit,stumbleupon,tumblr,twitter,xing
+		services = facebook,twitter,gplus,xing
 	}
 }
 

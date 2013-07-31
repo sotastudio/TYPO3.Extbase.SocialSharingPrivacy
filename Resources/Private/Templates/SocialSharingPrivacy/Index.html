@@ -1,26 +1,32 @@
-{namespace ssp=Tx_SocialSharingPrivacy_ViewHelpers}
+{namespace hk=Tx_Helperkit_ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
 
 <f:layout name="Default" />
 
 <f:section name="main">
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.facebook.css')}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.twitter.css')}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.gplus.css')}" />
+    <f:comment>Base files</f:comment>
+    <hk:asset.cssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" />
+    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
 
-    <ssp:AddJQuery altJQueryFile="{settings.lib.jQuery}" moveToFooter="{settings.lib.moveToFooter}" />
+    <f:comment>jQuery & Cookie Lib</f:comment>
+    <hk:asset.jQuery altJQueryFile="{settings.lib.jQuery}" moveToFooter="{settings.lib.moveToFooter}" />
     <f:if condition="{settings.useCookies}">
-        <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.cookies.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+        <hk:asset.cssJs file="{settings.lib.jQueryCookies}" moveToFooter="{settings.lib.moveToFooter}" />
     </f:if>
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.facebook.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.twitter.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.gplus.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.facebook.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.twitter.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddCssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.gplus.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <ssp:AddJsInline code="<f:render partial='JavaScriptRaw' arguments='{_all}'/>"
+
+    <v:iterator.explode content="{settings.services}" glue="," as="services">
+        <f:for each="{services}" as="service">
+            <hk:asset.cssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.{service}.css')}" />
+            <f:comment>Base JS file of service</f:comment>
+            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+            <f:comment>localized JS file of service</f:comment>
+            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+        </f:for>
+    </v:iterator.explode>
+
+    <f:comment>Initializing JS</f:comment>
+    <hk:asset.jsInline code="<f:render partial='JavaScriptRaw' arguments='{_all}'/>"
                      name="socialSharePrivacy"
                      moveToFooter="{settings.lib.moveToFooter}"/>
 
