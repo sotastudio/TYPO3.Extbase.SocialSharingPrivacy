@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'description' => 'Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.0.0',
+	'version' => '1.1.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -39,6 +39,8 @@ $EM_CONF[$_EXTKEY] = array (
 			'typo3' => '6.0-0.0.0',
 			'extbase' => '',
 			'fluid' => '',
+			'helperkit' => '',
+			'vhs' => ''
 		),
 		'conflicts' => '',
 		'suggests' => 

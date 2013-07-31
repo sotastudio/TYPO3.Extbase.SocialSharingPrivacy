@@ -9,10 +9,29 @@ This awesome tool is built up in panzi's awesome jQuery Plugin. It supports so m
 
 Take a loot by yourself: https://github.com/panzi/SocialSharePrivacy.
 
+Supported services:
+
+* buffer
+* delicious
+* disqus
+* facebook
+* flattr
+* gplus
+* hackernews
+* linkedin
+* mail
+* pinterest
+* reddit
+* stumbleupon
+* tumblr
+* twitter
+* xing
+
+
 
 ## Roadmap and Tasks
 
-Not every service is integrated within this ext yet. It will be - you can, of course, help me complete and maintain this ext.
+Stable. Feel free to suggest stuff.
 
 
 ## Contribute
