@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "social_sharing_privacy".
  *
- * Auto generated 02-05-2013 18:12
+ * Auto generated 31-07-2013 19:26
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -16,8 +16,8 @@ $EM_CONF[$_EXTKEY] = array (
 	'category' => 'plugin',
 	'shy' => 0,
 	'version' => '1.1.0',
-	'dependencies' => 'extbase,fluid',
-	'conflicts' => '',
+	'dependencies' => 'extbase,fluid,helperkit,vhs',
+	'conflicts' => NULL,
 	'priority' => '',
 	'loadOrder' => '',
 	'module' => '',
@@ -32,16 +32,24 @@ $EM_CONF[$_EXTKEY] = array (
 	'author_company' => 'sota studio',
 	'CGLcompliance' => NULL,
 	'CGLcompliance_note' => NULL,
-	'constraints' => array (
-		'depends' => array (
-			'typo3' => '4.5-0.0.0',
+	'constraints' => 
+	array (
+		'depends' => 
+		array (
+			'typo3' => '6.0-0.0.0',
 			'extbase' => '1.3',
 			'fluid' => '1.3',
 			'helperkit' => '',
-			'vhs' => ''
+			'vhs' => '',
 		),
 		'conflicts' => '',
-		'suggests' => array (
+		'suggests' => 
+		array (
 		),
 	),
+	'suggests' => 
+	array (
+	),
 );
+
+?>
