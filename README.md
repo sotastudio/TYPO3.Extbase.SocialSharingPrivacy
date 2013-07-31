@@ -5,9 +5,7 @@ EXT:social_share_privacy
 
 ## What is this Repo about
 
-This awesome tool is built up in panzi's awesome jQuery Plugin. It supports so many sharing services... i can't even count. ;-)
-
-Take a loot by yourself: https://github.com/panzi/SocialSharePrivacy.
+This awesome tool is built up on panzi's awesome jQuery Plugin. It supports so many sharing services:
 
 Supported services:
 
@@ -27,6 +25,7 @@ Supported services:
 * twitter
 * xing
 
+Take a loot by yourself: https://github.com/panzi/SocialSharePrivacy.
 
 
 ## Roadmap and Tasks
