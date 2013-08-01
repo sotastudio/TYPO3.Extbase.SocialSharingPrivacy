@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "social_sharing_privacy".
  *
- * Auto generated 31-07-2013 19:26
+ * Auto generated 01-08-2013 12:50
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'description' => 'Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '1.1.0',
+	'version' => '1.1.1',
 	'dependencies' => 'extbase,fluid,helperkit,vhs',
 	'conflicts' => NULL,
 	'priority' => '',
@@ -36,7 +36,7 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' => 
 		array (
-			'typo3' => '6.0-0.0.0',
+			'typo3' => '6.0-6.0.99',
 			'extbase' => '1.3',
 			'fluid' => '1.3',
 			'helperkit' => '',
