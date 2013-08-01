@@ -7,7 +7,7 @@
     <f:comment>Base files</f:comment>
     <hk:asset.cssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" />
     <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
 
     <f:comment>jQuery & Cookie Lib</f:comment>
     <hk:asset.jQuery altJQueryFile="{settings.lib.jQuery}" moveToFooter="{settings.lib.moveToFooter}" />
@@ -21,7 +21,7 @@
             <f:comment>Base JS file of service</f:comment>
             <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
             <f:comment>localized JS file of service</f:comment>
-            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/de/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
+            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
         </f:for>
     </v:iterator.explode>
 

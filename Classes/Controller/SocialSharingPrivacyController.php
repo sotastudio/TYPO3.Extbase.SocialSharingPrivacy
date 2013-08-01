@@ -39,7 +39,11 @@ class Tx_SocialSharingPrivacy_Controller_SocialSharingPrivacyController extends 
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('baseUrl', $GLOBALS['TSFE']->baseUrl);
+		$tplObj = array(
+			'baseUrl' => $GLOBALS['TSFE']->baseUrl,
+			'language' => $GLOBALS['TSFE']->lang
+		);
+		$this->view->assignMultiple($tplObj);
 	}
 
 }
