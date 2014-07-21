@@ -1,55 +1,25 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "social_sharing_privacy".
- *
- * Auto generated 01-08-2013 12:50
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
-$EM_CONF[$_EXTKEY] = array (
-	'title' => 'Social Share Privacy',
+$EM_CONF[$_EXTKEY] = array(
+	'title' => 'Social Sharing Privacy',
 	'description' => 'Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3',
 	'category' => 'plugin',
-	'shy' => 0,
-	'version' => '1.1.1',
-	'dependencies' => 'extbase,fluid,helperkit,vhs',
-	'conflicts' => NULL,
-	'priority' => '',
-	'loadOrder' => '',
-	'module' => '',
+	'version' => '1.2.0',
 	'state' => 'stable',
 	'uploadfolder' => 1,
 	'createDirs' => '',
-	'modify_tables' => '',
-	'clearcacheonload' => 0,
-	'lockType' => '',
+	'clearCacheOnLoad' => 1,
 	'author' => 'Andy Hausmann',
 	'author_email' => 'ah@sota-studio.de',
-	'author_company' => 'sota studio',
-	'CGLcompliance' => NULL,
-	'CGLcompliance_note' => NULL,
-	'constraints' => 
-	array (
-		'depends' => 
-		array (
-			'typo3' => '6.0-6.0.99',
-			'extbase' => '1.3',
-			'fluid' => '1.3',
+	'author_company' => 'SOTA Studio',
+	'constraints' => array(
+		'depends' => array(
+			'typo3' => '6.1.0-6.2.99',
+			'cms' => '',
 			'helperkit' => '',
 			'vhs' => '',
 		),
-		'conflicts' => '',
-		'suggests' => 
-		array (
-		),
-	),
-	'suggests' => 
-	array (
+		'conflicts' => array(),
+		'suggests' => array(),
 	),
 );
-
-?>

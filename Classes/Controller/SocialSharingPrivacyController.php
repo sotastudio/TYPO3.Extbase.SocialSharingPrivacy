@@ -1,9 +1,9 @@
 <?php
-
+namespace SotaStudio\SocialSharingPrivacy\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012-2013 Andy Hausmann <ah@sota-studio.de>
+ *  (c) 2012-2014 Andy Hausmann <ah@sota-studio.de>, SOTA Studio
  *
  *  All rights reserved
  *
@@ -24,18 +24,20 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+
 /**
  * Main Controller.
  *
  * @author Andy Hausmann <ah@sota-studio.de>
  * @package social_sharing_privacy
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_SocialSharingPrivacy_Controller_SocialSharingPrivacyController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
-{
+class SocialSharingPrivacyController extends ActionController {
+
 	/**
 	 * action list
 	 *
+	 * @var	$GLOBALS['TSFE'] \TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController
 	 * @return void
 	 */
 	public function indexAction() {
@@ -47,4 +49,3 @@ class Tx_SocialSharingPrivacy_Controller_SocialSharingPrivacyController extends 
 	}
 
 }
-?>

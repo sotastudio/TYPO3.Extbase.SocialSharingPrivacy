@@ -1,0 +1,7 @@
+ {
+     "name": "sotastudio/social_sharing_privacy",
+     "description": "Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3",
+     "require": {
+     },
+     "type": "typo3-cms-extension"
+  }
