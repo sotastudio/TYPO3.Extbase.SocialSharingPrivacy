@@ -1,7 +1,27 @@
- {
-     "name": "sotastudio/social_sharing_privacy",
-     "description": "Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3",
-     "require": {
-     },
-     "type": "typo3-cms-extension"
-  }
+{
+	"name": "sotastudio/social_sharing_privacy",
+	"description": "Brings the awesome jQuery Plugins for sharing stuff from Mathias Panzenböck to TYPO3",
+	"version": "1.2.0",
+	"type": "typo3-cms-extension",
+	"keywords": ["social share", "heise", "social privacy", "share"],
+	"homepage": "https://sota-studio.de",
+	"authors": [
+		{
+			"name": "Andy Hausmann",
+			"email": "ah@sota-studio.de",
+			"homepage": "http://sota-studio.de",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "hi@sota-studio.de",
+		"issues": "https://github.com/sotastudio/TYPO3.Extbase.SocialSharingPrivacy/issues",
+		"source": "https://github.com/sotastudio/TYPO3.Extbase.SocialSharingPrivacy"
+	},
+	"require": {
+
+	},
+	"suggest": {
+
+	}
+}
