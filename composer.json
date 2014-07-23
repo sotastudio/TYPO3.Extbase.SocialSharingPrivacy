@@ -19,7 +19,7 @@
 		"source": "https://github.com/sotastudio/TYPO3.Extbase.SocialSharingPrivacy"
 	},
 	"require": {
-
+		"fluidtypo3/vhs": "*"
 	},
 	"suggest": {
 
