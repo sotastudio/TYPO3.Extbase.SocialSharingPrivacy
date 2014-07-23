@@ -8,7 +8,7 @@ plugin.tx_socialsharingprivacy {
  		lib {
 			jQuery = EXT:social_sharing_privacy/Resources/Public/Js/jquery-1.9.1.min.js
 			jQueryCookies = EXT:social_sharing_privacy/Resources/Public/Js/jquery.cookies.js
-			moveToFooter = 1
+			moveToFooter = 0
  		}
 	}
 }

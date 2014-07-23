@@ -1,34 +1,36 @@
 {namespace hk=SotaStudio\Helperkit\ViewHelpers}
 {namespace v=Tx_Vhs_ViewHelpers}
 
-<f:layout name="Default" />
+<f:if condition="{settings}">
+	<f:render section="main" />
+</f:if>
+
 
 <f:section name="main">
-    <f:comment>Base files</f:comment>
-    <hk:asset.cssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" />
-    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-    <hk:asset.cssJs file="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-
-    <f:comment>jQuery & Cookie Lib</f:comment>
-    <hk:asset.jQuery altJQueryFile="{settings.lib.jQuery}" moveToFooter="{settings.lib.moveToFooter}" />
-    <f:if condition="{settings.useCookies}">
-        <hk:asset.cssJs file="{settings.lib.jQueryCookies}" moveToFooter="{settings.lib.moveToFooter}" />
-    </f:if>
-
     <v:iterator.explode content="{settings.services}" glue="," as="services">
-        <f:for each="{services}" as="service">
-            <hk:asset.cssJs file="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.{service}.css')}" />
-            <f:comment>Base JS file of service</f:comment>
-            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-            <f:comment>localized JS file of service</f:comment>
-            <hk:asset.cssJs file="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.{service}.js')}" moveToFooter="{settings.lib.moveToFooter}" />
-        </f:for>
+		<f:if condition="{f:count(subject: services)}">
+			<f:comment>jQuery & Cookie Lib</f:comment>
+			<f:if condition="{settings.useCookies}">
+				<v:asset.script path="{f:uri.resource(path: 'Js/jquery.cookies.js')}" name="jquery-cookies" allowMoveToFooter="{settings.moveToFooter}" dependencies="jquery" />
+			</f:if>
+
+			<f:comment>Base files</f:comment>
+			<v:asset.style path="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.common.css')}" name="ssp-style" group="ssp" />
+			<v:asset.script path="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.js')}" name="ssp-core" allowMoveToFooter="{settings.moveToFooter}" dependencies="jquery" group="ssp" />
+			<v:asset.script path="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.js')}" name="ssp-trans" allowMoveToFooter="{settings.moveToFooter}" dependencies="jquery" group="ssp" />
+
+			<f:for each="{services}" as="service">
+				<v:asset.style path="{f:uri.resource(path: 'Css/jquery.socialshareprivacy.{service}.css')}" name="ssp-{service}-style" group="ssp" />
+				<f:comment>Base JS file of service</f:comment>
+				<v:asset.script path="{f:uri.resource(path: 'Js/jquery.socialshareprivacy.{service}.js')}" name="ssp-{service}" allowMoveToFooter="{settings.moveToFooter}" dependencies="ssp-core" group="ssp" />
+				<f:comment>localized JS file of service</f:comment>
+				<v:asset.script path="{f:uri.resource(path: 'Js/{language}/jquery.socialshareprivacy.{service}.js')}" name="ssp-{service}-trans" allowMoveToFooter="{settings.moveToFooter}" dependencies="ssp-core" group="ssp" />
+			</f:for>
+
+			<f:comment>Initializing JS</f:comment>
+			<v:asset.script content="<f:render partial='JavaScriptRaw' arguments='{_all}'/>" name="ssp-init" allowMoveToFooter="{settings.moveToFooter}" dependencies="ssp-core" group="ssp" />
+
+    		<div class="social-share-privacy"></div>
+		</f:if>
     </v:iterator.explode>
-
-    <f:comment>Initializing JS</f:comment>
-    <hk:asset.jsInline code="<f:render partial='JavaScriptRaw' arguments='{_all}'/>"
-                     name="socialSharePrivacy"
-                     moveToFooter="{settings.lib.moveToFooter}"/>
-
-    <div class="social-share-privacy"></div>
 </f:section>

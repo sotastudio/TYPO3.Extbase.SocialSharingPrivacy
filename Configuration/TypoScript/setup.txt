@@ -5,11 +5,7 @@ plugin.tx_socialsharingprivacy {
 		layoutRootPath = {$plugin.tx_socialsharingprivacy.view.layoutRootPath}
 	}
 	settings {
-		lib {
-			jQuery = {$plugin.tx_socialsharingprivacy.settings.jQuery}
-			jQueryCookies = {$plugin.tx_socialsharingprivacy.settings.jQueryCookies}
-			moveToFooter = {$plugin.tx_socialsharingprivacy.settings.moveToFooter}
-		}
+		moveToFooter = {$plugin.tx_socialsharingprivacy.settings.moveToFooter}
 		# Leave empty to share dynamic urls of the pages the visitor is visiting.
 		uri =
 		# Choice of design: line|box
