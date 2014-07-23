@@ -9,8 +9,8 @@ $pluginSignature = strtolower($extensionName) . '_pi1';
 
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	$_EXTKEY,
-	'Pi1',
+	'SotaStudio.' . $_EXTKEY,
+	'Base',
 	'SocialSharingPrivacy'
 );
 
