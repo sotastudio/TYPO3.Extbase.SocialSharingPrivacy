@@ -37,7 +37,8 @@ plugin.tx_socialsharingprivacy._CSS_DEFAULT_STYLE (
 temp.socialSharingPrivacy = USER
 temp.socialSharingPrivacy {
 	userFunc = tx_extbase_core_bootstrap->run
-	pluginName = Pi1
+	pluginName = Base
+	vendorName = SotaStudio
 	extensionName = SocialSharingPrivacy
 	controller = SocialSharingPrivacy
 	action = index

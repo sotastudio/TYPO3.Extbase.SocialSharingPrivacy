@@ -1,3 +1,8 @@
+### 1.3.1
+
+* Fixed TypoScript Lib for Plugin usage
+
+
 ### 1.3.0
 
 * Massively improved code base and logic
